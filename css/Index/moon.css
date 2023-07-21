@@ -10,43 +10,29 @@
     }
 }
 
- 
-  /* 모바일 규격 */
-  @media screen and (max-width: 768px) {
-}
-
-  /* PC 규격 */
-  @media screen and (min-width: 769px) {
-}
-
-
-
-.moonBox {
-    width: 100%; 
-    /* height: 200vh; */
-    /* position: absolute; */
-
-    display: flex;
-    justify-content: center;
-}
-
-.moon{
-    position: relative;
-    padding: 25px;
-
-    width: 50px;
-    height: 50px;
-
-    animation: colorChange 4s infinite;
-}
+/* 공통 규격 */
 
 object{
     cursor: pointer;
 }
 
+.moon {
+    position: relative;
+    animation: colorChange 4s infinite;
+}
+
+.moon:hover {
+    transition: all 0.5s ease-in-out;
+}
+
+.moonBox {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
 .moonBox .moon:nth-child(3){
     top: 0;
-    /* height: 60px; */
 }
 
 .moonBox .moon:nth-child(2),.moonBox .moon:nth-child(4) {
@@ -58,8 +44,42 @@ object{
 }
 
 
-.moon:hover{
-    width: 70px;
-    height: 70px;
-    transition: all 0.5s ease-in-out;
+
+ 
+  /* 모바일 규격 */
+  @media screen and (max-width: 768px) {
+
+    .moon{
+        padding: 15px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .moon:hover{
+        width: 55px;
+        height: 55px;
+    }
+
 }
+
+  /* PC 규격 */
+  @media screen and (min-width: 769px) {
+
+    .moon{
+        padding: 25px;
+    
+        width: 50px;
+        height: 50px;
+    }
+
+    .moon:hover{
+        width: 70px;
+        height: 70px;
+    }
+  
+
+} 
+
+
+

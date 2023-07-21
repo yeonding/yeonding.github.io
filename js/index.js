@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         moon.onclick = () => {
             console.log ('clicked')
+            document.querySelectorAll('.part')[index].classList.toggle('show')
         }
     })
 

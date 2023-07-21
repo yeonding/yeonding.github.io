@@ -1,6 +1,7 @@
 @import url(/css/Index/moon.css);
 
 
+
 body{
     display: flex;
     flex-direction: column;
@@ -39,7 +40,11 @@ section{
 .moonBox{
     height: 200px;
     /* background-color: black; */
-    z-index: 1;
+    /* z-index: 1; */
+}
+
+.moon{
+    z-index: 50;
 }
 
 .moonFlexContainer{
@@ -48,6 +53,8 @@ section{
 
 .profile{
     display: flex;
+    flex-direction: column;
+    
     justify-content: center;
     align-items: center;
 
@@ -59,9 +66,13 @@ section{
 
 }
 
-.profile div {
-    visibility: hidden;
 
+.profile div:nth-child(1) {
+    color: blue;
+}
+
+.part{
+    display: none;
     width: 80%;
     height: 100%;
     background-color: rgba(255, 248, 252, 0.871);
@@ -69,7 +80,6 @@ section{
     border-radius: 30px;
 }
 
-.profile div:nth-child(1) {
-    color: blue;
+.part.show{
+    display: block;
 }
-

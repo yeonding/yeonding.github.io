@@ -37,5 +37,10 @@ a {
     color: inherit; 
     cursor: pointer; 
   }
+
+
+svg {
+    outline: none;
+}
   
 
