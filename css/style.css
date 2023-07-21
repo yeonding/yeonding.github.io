@@ -16,6 +16,13 @@ body{
 
     background-color: #393939;
     color: #FFFFFF;
+
+    margin: 0;
+}
+
+.morning-style{
+    background-color: #FFFFFF;
+    color: #393939;
 }
 
 ul { list-style: none; }
