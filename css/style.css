@@ -25,16 +25,10 @@ ul { list-style: none; }
 }
 
 
-.moonBox {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100vw;
-}
-
-
-
-.moon:hover{
-    filter: hue-rotate(200deg);
-}
+a {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer; 
+  }
+  
 

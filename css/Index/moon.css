@@ -1,0 +1,51 @@
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg); /* 시작 색상 (0도) */
+    }
+    50% {
+        filter: hue-rotate(180deg); /* 중간 색상 (180도) */
+    }
+    100% {
+        filter: hue-rotate(360deg); /* 끝 색상 (360도) */
+    }
+}
+
+
+.moonBox {
+    width: 100vw; 
+    height: 100vh;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+}
+
+.moon{
+    position: relative;
+    padding: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    animation: colorChange 4s infinite;
+}
+
+.moonBox .moon:nth-child(3){
+    top: 0;
+    /* height: 60px; */
+}
+
+.moonBox .moon:nth-child(2),.moonBox .moon:nth-child(4) {
+    top: 30px;
+}
+
+.moonBox .moon:nth-child(1),.moonBox .moon:nth-child(5) {
+    top: 60px;
+}
+
+
+.moon:hover{
+    width: 70px;
+    height: 70px;
+    transition: all 1s ease-in-out;
+}
