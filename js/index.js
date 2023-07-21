@@ -1,9 +1,23 @@
+//로컬스토리지를 위해
+const onMorningMode = () => {
+    document.body.classList.add('morning-style')
+    localStorage.setItem('morningMode', 'enable')
+}
+
+const onDarkMode = () => {
+    document.body.classList.remove('morning-style')
+    localStorage.setItem('morningMode', null)
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const moons = document.querySelectorAll('.moon')
     const mnBtn = document.querySelector('.morning')
     let isMorning = false
+    let morningMode = localStorage.getItem('morningMode')
 
-    isMorning = false
+    if (morningMode === 'enable') onMorningMode() 
+    else onDarkMode()
+
     const parts = document.querySelectorAll('.part')
     
     const tippyOptions = {
@@ -33,15 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // 카테고리 이름들
     const titles = ['about me', 'skills', 'projects', 'archive', 'contact'];
 
     moons.forEach((moon, index) => {
+        // 달에 마우스를 올리면 tippy 실행
         moon.addEventListener('mouseenter', () => {
             if (index <= titles.length) {
                 showTippy(moon, titles[index]);
             } 
         }) // mouseenter end
 
+        // 달을 클릭하면 part div block
         moon.onclick = () => {
             console.log ('clicked')
             parts[index].classList.toggle('show')
